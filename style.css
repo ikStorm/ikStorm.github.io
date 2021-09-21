@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'font', sans-serif;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    background: url(world.png) 50% 50%/auto 75% no-repeat;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 140px) 3fr;
+    grid-template-rows: repeat(3, 140px) 1fr;
+    grid-gap: 0.5rem 0.5rem;
+}
+
+.box0 {
+    font-size: 1.5rem;
+    color: #434d54;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.box1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.box2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.box3 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.box4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.box5 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.box6 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.box7 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.box8 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.box9 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    position: relative;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    backface-visibility: hidden;
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.front {
+    color: #ff7c02;
+    background: #f9efe5;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    color: #f9efe5;
+    background: #ff7c02;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.container:hover .card {
+    transform: rotateY(180deg);
+}
