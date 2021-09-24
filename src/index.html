@@ -1,219 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="My personal page">
-    <meta name="author" content="Ilya">
-    <meta name="robots" content="all">
-
-    <meta property="og:title" content="My web page">
-
-    <title>Ilya Kostin Web-Developer, Android-Developer</title>
-    <!--сбрасываем все стили по умолчанию-->
-    <link rel="stylesheet" href="css/reset.css">
-    <!--устанавливаем иконочный шрифт-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!--подключаем внешние анимации-->
-    <link href="css/animate.css" rel="stylesheet">
-    <script>
-        function raven() {
-            var x = document.getElementById('anim');
-            var y = document.getElementById('btn');
-            if (y.value == "Call Raven") {
-                y.setAttribute("value", "Roll Back");
-                x.style.animation = 'image_change 3s forwards';
-            } else {
-                y.setAttribute("value", "Call Raven");
-                x.style.animation = 'image_change1 3s forwards';
-            }
-        }
-
-    </script>
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 </head>
-
 <body>
-    <div class="preloader_background">
-        <div class="preloader"></div>
-    </div>
-    <header>
-        <nav>
-            <div class="logo">Ilya Kostin</div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Cases</a></li>
-                    <li><a href="#">Price</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="first_screen">
+<h1>To-Do List</h1>
+<form>
+    <input type="text" id="input-task" placeholder="Enter the task" required>
+    <button id="add-task-button">ADD TASK</button>
+    <ul id="task-list">
+    </ul>
+</form>
+<script>
+    'use strict';
 
-            <div class="title_screen" id="anim"></div>
-            <div class="title_container">
-                <h1><span>Hey, I'm</span><br>Ilya Kostin</h1>
-                <h4>Full Stack Developer</h4>
-                <input type="button" id='btn' onclick="raven()" value="Call Raven">
-                <input type="button" value="About me">
-            </div>
-        </section>
-        <section class="info_container">
-            <h2>About me</h2>
-            <hr>
-            <img>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus repudiandae libero, quibusdam quaerat. Delectus sit a eos cupiditate ipsam laboriosam officia, mollitia voluptatibus, quam assumenda ex ullam. Iusto cumque maiores modi consectetur dolorem non, porro, accusamus facere. Aliquid nam error eum veniam vel neque, magnam cumque in necessitatibus nisi, maxime id et similique provident? At officiis facere earum nulla, architecto accusamus iure illum sunt obcaecati quam ab, voluptates praesentium totam repellat reiciendis sed voluptatum ipsam nam. Laudantium ipsam sit sint fuga optio magni odit distinctio numquam assumenda aspernatur, corporis animi officiis temporibus atque mollitia repudiandae aliquam quidem! In, laudantium, quas.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime esse, vero corporis voluptate. Doloribus animi repellat, consequuntur ratione saepe, officiis qui commodi quis eaque iure magnam sint impedit nulla voluptatem provident illo eum. Dolorem ab est dicta atque, iure vel hic, consequatur vitae sit harum error, odio, quas sequi a.</p>
-            <div>
-                <a href="#"><i class="fa fa-download" aria-hidden="true"></i>
-                    Download my resume</a>
-            </div>
-        </section>
-        <section class="skills_container">
-            <h2>What is my skills?</h2>
-            <hr>
-            <div class="skills">
-                <div class="unit">
-                    <i class="fa fa-laptop" aria-hidden="true"></i>
-                    <h3>Web-Design</h3>
-                    <span>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. <br>Debitis, esse!</span>
-                </div>
-                <div class="unit">
-                    <i class="fa fa-code" aria-hidden="true"></i>
-                    <h3>Web-Development</h3>
-                    <span>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. <br>Debitis, esse!</span>
-                </div>
-                <div class="unit">
-                    <i class="fa fa-android" aria-hidden="true"></i>
-                    <h3>Android Development</h3>
-                    <span>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. <br>Debitis, esse!</span>
-                </div>
-                <div class="unit">
-                    <i class="fa fa-cogs" aria-hidden="true"></i>
-                    <h3>Coding</h3>
-                    <span>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. <br>Debitis, esse!</span>
-                </div>
-            </div>
-        </section>
-        <section class="examples_container">
-            <h2>Examples</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, veritatis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, quae!</p>
-            <img id="img_examples" src="img/ppark.ru.jpg" alt="examples">
-            <div class="example_center">
-                <div class="example_left">
-                    <p><b>CLIENT:</b><br><small>private person</small></p>
-                    <p><b>WEBSITE:</b><br><small>https://www.somedomain.com</small></p>
-                    <input type="button" value="Visit Live Site">
-                </div>
-                <div class="example_right">
-                    <p><b>Project name</b><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Eum quibusdam earum, voluptates, qui quaerat minima ratione, distinctio fuga similique, eligendi incidunt optio. <br>Obcaecati saepe excepturi assumenda animi sed nesciunt fugiat nemo corporis</p>
-                </div>
-            </div>
-        </section>
-        <section class="calculator">
-            <h2>What's the standart rates?</h2>
-            <div class="form">
-                <form action="#">
-                    <p>TYPE OF SITE</p>
-                    <select name="list">
-                        <option value="Opt1">Chose the type</option>
-                        <option value="Opt2">Landing page</option>
-                        <option value="Opt3">Personal web page</option>
-                        <option value="Opt4">Web Shop</option>
-                        <option value="Opt5">Web Portal</option>
-                    </select>
-                    <p>DESIGN</p>
-                    <select name="list">
-                        <option value="Opt1">Chose the type</option>
-                    </select>
-                    <p>ADAPTABILITY</p>
-                    <select name="list" id="list">
-                        <option value="Opt1">Chose the type</option>
-                    </select>
-                </form>
-            </div>
-            <div class="last">
-                <p class="left_side">Deadline</p>
-                <p class="right_side">0</p>
-                <p class="left_side">Price</p>
-                <p class="right_side">0</p>
-            </div>
-        </section>
-        <section class="stats">
-            <h2>SOME STATISTICS</h2>
-            <hr>
-            <div class="skills">
-                <div class="unit">
-                    <i class="fa fa-smile-o" aria-hidden="true"></i>
-                    <h3>120</h3><br><span>happy customers</span>
-                </div>
-                <div class="unit">
-                    <i class="fa fa-code" aria-hidden="true"></i>
-                    <h3>4.600</h3><br><span>hours of work</span>
-                </div>
-                <div class="unit">
-                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                    <h3>340</h3><br><span>completed projects</span>
-                </div>
-                <div class="unit">
-                    <i class="fa fa-trophy" aria-hidden="true"></i>
-                    <h3>23</h3><br><span>awards received</span>
-                </div>
-            </div>
-        </section>
-        <section class="reviews">
-            <h2>Reviews</h2>
-            <hr>
-            <img id="phperson" src="img/gmgaz.png" alt="RW">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam laboriosam aperiam cumque odit, <br>corporis optio saepe eius accusantium ipsam perspiciatis!</p>
-            <p><b>Mikhail,</b> General manager "GazProm" PJS</p>
-            <input type="radio" name="1" value="1">
-            <input type="radio" name="1" value="2">
-            <input type="radio" name="1" value="3">
-        </section>
-    </main>
-    <footer>
-        <h2>HOW TO CONTACT ME?</h2>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos omnis minus voluptatibus distinctio veritatis laborum, vitae excepturi, voluptates tempora magni!</p>
-        <div class="skills">
-            <div class="unit">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <p>Saint-Petersburg<br>Nevskiy av. 11</p>
-            </div>
-            <div class="unit">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                <p>ikos@sinox.ru</p>
-            </div>
-            <div class="unit">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <p>+7 911 926-72-63</p>
-            </div>
-        </div>
-        <h3>LEAVE ME MESSAGE</h3>
-        <form action="" class="feedback">
-            <input id="r" type="text" name="Text_input" placeholder="Enter your name">
-            <input type="email" placeholder="Enter your e-mail">
-            <textarea name="message" cols="30" rows="10" placeholder="Enter message here"></textarea>
-            <input type="submit" id="submit" value="Send">
-        </form>
-        <div>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-vk" aria-hidden="true"></i>
-            <i class="fa fa-paper-plane" aria-hidden="true"></i>
-            <i class="fa fa-github" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-        </div>
-        <div class="map"></div>
-        <p id='p'>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2021 Ilya Kostin. Design by Web</p>
-    </footer>
+    function uniqIdMaker() {
+        let a = String(Math.floor(Math.random() * 100));
+        return (document.getElementById(a) == null) ? a : uniqIdMaker();
+    }
+
+    const inputText = document.querySelector('#input-task');
+    let tasks;
+
+    !localStorage.tasks ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks'));
+
+    function Task(description) {
+        this.description = description;
+        this.completed = false;
+    }
+
+    const createTemplate = (task, index) => {
+        let uniqId = uniqIdMaker();
+        return `
+            <li><input onclick="completeTask(${index})" type="checkbox" id="${uniqId}" ${task.completed ? 'checked' : ''}><label for="${uniqId}">
+            <span class="task">${task.description}</span></label>
+            <button class="delete-btn" onclick="removeTask(${index})">
+            <i class="fa fa-times-circle" aria-hidden="true"></i></button></li>
+    `
+    }
+
+    const fillHtmlList = () => {
+        window['task-list'].innerHTML = '';
+        if (tasks.length > 0) {
+            tasks.forEach((item, index) => {
+                window['task-list'].innerHTML += createTemplate(item, index);
+            })
+        }
+    }
+
+    fillHtmlList();
+
+    const updateLocal = () => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    const completeTask = index => {
+        tasks[index].completed = !tasks[index].completed;
+        updateLocal();
+    }
+
+    const removeTask = index => {
+        tasks.splice(index, 1);
+        updateLocal();
+        fillHtmlList();
+    }
+
+    window['add-task-button'].addEventListener('click', () => {
+        if (inputText.value !== "") {
+            tasks.push(new Task(inputText.value));
+            updateLocal();
+            fillHtmlList();
+            inputText.value = '';
+        }
+    })
+</script>
 </body>
-
 </html>
